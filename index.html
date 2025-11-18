@@ -37,8 +37,8 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/Prop207PropertiesinFlagstaff_1.js"></script>
-        <script src="data/FlagstaffCityBoundary_2.js"></script>
+        <script src="data/FlagstaffProp207Properties_1.js"></script>
+        <script src="data/FlagstaffCityLimits_2.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -57,7 +57,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[35.097504864645664,-111.74834823586471],[35.27461546565445,-111.46338813161609]]);
+        }).fitBounds([[35.097504864645664,-111.76182838450882],[35.27461546565445,-111.44990798297198]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -118,7 +118,7 @@
         });
         layer_Googlemapsterrian_0;
         map.addLayer(layer_Googlemapsterrian_0);
-        function pop_Prop207PropertiesinFlagstaff_1(feature, layer) {
+        function pop_FlagstaffProp207Properties_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -139,12 +139,36 @@
                         <td class="visible-with-data" id="Account Number">' + (feature.properties['Account Number'] !== null ? autolinker.link(String(feature.properties['Account Number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Full Street Address</th>\
-                        <td class="visible-with-data" id="Full Street Address">' + (feature.properties['Full Street Address'] !== null ? autolinker.link(String(feature.properties['Full Street Address']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Address Number</th>\
+                        <td class="visible-with-data" id="Address Number">' + (feature.properties['Address Number'] !== null ? autolinker.link(String(feature.properties['Address Number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">subdivision</th>\
-                        <td class="visible-with-data" id="subdivision">' + (feature.properties['subdivision'] !== null ? autolinker.link(String(feature.properties['subdivision']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Address Direction</th>\
+                        <td class="visible-with-data" id="Address Direction">' + (feature.properties['Address Direction'] !== null ? autolinker.link(String(feature.properties['Address Direction']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Street Name</th>\
+                        <td class="visible-with-data" id="Street Name">' + (feature.properties['Street Name'] !== null ? autolinker.link(String(feature.properties['Street Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Street Name 2</th>\
+                        <td class="visible-with-data" id="Street Name 2">' + (feature.properties['Street Name 2'] !== null ? autolinker.link(String(feature.properties['Street Name 2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">City/Community</th>\
+                        <td class="visible-with-data" id="City/Community">' + (feature.properties['City/Community'] !== null ? autolinker.link(String(feature.properties['City/Community']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Zipcode</th>\
+                        <td class="visible-with-data" id="Zipcode">' + (feature.properties['Zipcode'] !== null ? autolinker.link(String(feature.properties['Zipcode']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Current Address</th>\
+                        <td class="visible-with-data" id="Current Address">' + (feature.properties['Current Address'] !== null ? autolinker.link(String(feature.properties['Current Address']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Subdivision</th>\
+                        <td class="visible-with-data" id="Subdivision">' + (feature.properties['Subdivision'] !== null ? autolinker.link(String(feature.properties['Subdivision']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Acres/Sqft.</th>\
@@ -153,10 +177,6 @@
                     <tr>\
                         <th scope="row">Type of Property</th>\
                         <td class="visible-with-data" id="Type of Property">' + (feature.properties['Type of Property'] !== null ? autolinker.link(String(feature.properties['Type of Property']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Owner Adress</th>\
-                        <td class="visible-with-data" id="Owner Adress">' + (feature.properties['Owner Adress'] !== null ? autolinker.link(String(feature.properties['Owner Adress']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Owner</th>\
@@ -174,9 +194,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Prop207PropertiesinFlagstaff_1_0() {
+        function style_FlagstaffProp207Properties_1_0() {
             return {
-                pane: 'pane_Prop207PropertiesinFlagstaff_1',
+                pane: 'pane_FlagstaffProp207Properties_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -189,21 +209,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Prop207PropertiesinFlagstaff_1');
-        map.getPane('pane_Prop207PropertiesinFlagstaff_1').style.zIndex = 401;
-        map.getPane('pane_Prop207PropertiesinFlagstaff_1').style['mix-blend-mode'] = 'normal';
-        var layer_Prop207PropertiesinFlagstaff_1 = new L.geoJson(json_Prop207PropertiesinFlagstaff_1, {
+        map.createPane('pane_FlagstaffProp207Properties_1');
+        map.getPane('pane_FlagstaffProp207Properties_1').style.zIndex = 401;
+        map.getPane('pane_FlagstaffProp207Properties_1').style['mix-blend-mode'] = 'normal';
+        var layer_FlagstaffProp207Properties_1 = new L.geoJson(json_FlagstaffProp207Properties_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Prop207PropertiesinFlagstaff_1',
-            layerName: 'layer_Prop207PropertiesinFlagstaff_1',
-            pane: 'pane_Prop207PropertiesinFlagstaff_1',
-            onEachFeature: pop_Prop207PropertiesinFlagstaff_1,
-            style: style_Prop207PropertiesinFlagstaff_1_0,
+            dataVar: 'json_FlagstaffProp207Properties_1',
+            layerName: 'layer_FlagstaffProp207Properties_1',
+            pane: 'pane_FlagstaffProp207Properties_1',
+            onEachFeature: pop_FlagstaffProp207Properties_1,
+            style: style_FlagstaffProp207Properties_1_0,
         });
-        bounds_group.addLayer(layer_Prop207PropertiesinFlagstaff_1);
-        map.addLayer(layer_Prop207PropertiesinFlagstaff_1);
-        function pop_FlagstaffCityBoundary_2(feature, layer) {
+        bounds_group.addLayer(layer_FlagstaffProp207Properties_1);
+        map.addLayer(layer_FlagstaffProp207Properties_1);
+        function pop_FlagstaffCityLimits_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -215,36 +235,6 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['objectid'] !== null ? autolinker.link(String(feature.properties['objectid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['updated'] !== null ? autolinker.link(String(feature.properties['updated']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['globalid'] !== null ? autolinker.link(String(feature.properties['globalid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['websiteurl'] !== null ? autolinker.link(String(feature.properties['websiteurl']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['created_user'] !== null ? autolinker.link(String(feature.properties['created_user']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['created_date'] !== null ? autolinker.link(String(feature.properties['created_date']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['last_edited_user'] !== null ? autolinker.link(String(feature.properties['last_edited_user']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['last_edited_date'] !== null ? autolinker.link(String(feature.properties['last_edited_date']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -253,9 +243,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_FlagstaffCityBoundary_2_0() {
+        function style_FlagstaffCityLimits_2_0() {
             return {
-                pane: 'pane_FlagstaffCityBoundary_2',
+                pane: 'pane_FlagstaffCityLimits_2',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -266,20 +256,20 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_FlagstaffCityBoundary_2');
-        map.getPane('pane_FlagstaffCityBoundary_2').style.zIndex = 402;
-        map.getPane('pane_FlagstaffCityBoundary_2').style['mix-blend-mode'] = 'normal';
-        var layer_FlagstaffCityBoundary_2 = new L.geoJson(json_FlagstaffCityBoundary_2, {
+        map.createPane('pane_FlagstaffCityLimits_2');
+        map.getPane('pane_FlagstaffCityLimits_2').style.zIndex = 402;
+        map.getPane('pane_FlagstaffCityLimits_2').style['mix-blend-mode'] = 'normal';
+        var layer_FlagstaffCityLimits_2 = new L.geoJson(json_FlagstaffCityLimits_2, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_FlagstaffCityBoundary_2',
-            layerName: 'layer_FlagstaffCityBoundary_2',
-            pane: 'pane_FlagstaffCityBoundary_2',
-            onEachFeature: pop_FlagstaffCityBoundary_2,
-            style: style_FlagstaffCityBoundary_2_0,
+            dataVar: 'json_FlagstaffCityLimits_2',
+            layerName: 'layer_FlagstaffCityLimits_2',
+            pane: 'pane_FlagstaffCityLimits_2',
+            onEachFeature: pop_FlagstaffCityLimits_2,
+            style: style_FlagstaffCityLimits_2_0,
         });
-        bounds_group.addLayer(layer_FlagstaffCityBoundary_2);
-        map.addLayer(layer_FlagstaffCityBoundary_2);
+        bounds_group.addLayer(layer_FlagstaffCityLimits_2);
+        map.addLayer(layer_FlagstaffCityLimits_2);
         const url = {"Nominatim": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
         "BAN": "https://api-adresse.data.gouv.fr/search/?"}
         var photonControl = L.control.photon({
@@ -334,8 +324,8 @@
             }
         });
         var overlaysTree = [
-            {label: '<img src="legend/FlagstaffCityBoundary_2.png" /> Flagstaff City Boundary', layer: layer_FlagstaffCityBoundary_2},
-            {label: '<img src="legend/Prop207PropertiesinFlagstaff_1.png" /> Prop 207 Properties in Flagstaff', layer: layer_Prop207PropertiesinFlagstaff_1},
+            {label: '<img src="legend/FlagstaffCityLimits_2.png" /> Flagstaff City Limits', layer: layer_FlagstaffCityLimits_2},
+            {label: '<img src="legend/FlagstaffProp207Properties_1.png" /> Flagstaff Prop 207 Properties', layer: layer_FlagstaffProp207Properties_1},
             {label: "Google maps terrian", layer: layer_Googlemapsterrian_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
